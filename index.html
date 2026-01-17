@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luciano N. Cichanowski | Arquitectura & MMO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LNC.</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre-mi">Perfil</a></li>
+            <li><a href="#portfolio">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <span class="subtitle">Maestro Mayor de Obras</span>
+            <h1>Luciano Nicolas <br> Cichanowski</h1>
+            <p>Estudiante de Arquitectura | UTDT 2026</p>
+            <a href="#portfolio" class="btn">Ver Portfolio</a>
+        </div>
+        <div class="hero-visual">
+            <div class="visual-box"></div> 
+        </div>
+    </header>
+
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <h2>Formación & Enfoque</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Universidad Torcuato Di Tella</h3>
+                    <p class="date">2026 (Próximo a graduarse)</p>
+                    <p>Estudiante avanzado de Arquitectura. Enfoque en diseño contemporáneo y urbanismo.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Instituto Janssen</h3>
+                    <p class="date">Graduado</p>
+                    <p>Maestro Mayor de Obras (MMO). Base técnica sólida en construcción y dirección de obra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="projects">
+        <div class="container">
+            <h2>Proyectos Seleccionados</h2>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-img placeholder"></div> <div class="card-info">
+                        <h3>Vivienda Unifamiliar</h3>
+                        <p>Diseño y documentación técnica.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img placeholder"></div>
+                    <div class="card-info">
+                        <h3>Urbanismo UTDT</h3>
+                        <p>Intervención en espacio público.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-img placeholder"></div>
+                    <div class="card-info">
+                        <h3>Detalles Constructivos</h3>
+                        <p>Resolución técnica MMO.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <h2>Conectemos</h2>
+            <p>Abierto a colaboraciones y nuevos desafíos.</p>
+            <div class="socials">
+                <a href="#">Email</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+            </div>
+            <p class="copyright">&copy; 2026 Luciano Cichanowski.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Pequeño script para efecto de scroll suave en el nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
