@@ -1,0 +1,219 @@
+/* Variables de color y fuentes */
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #1a1a1a;
+    --accent-color: #4a4a4a; /* Gris arquitectónico */
+    --white: #ffffff;
+    --font-main: 'Montserrat', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    background: rgba(244, 244, 244, 0.95);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #888;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background: var(--text-color);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Visual Placeholder en Hero */
+.visual-box {
+    width: 400px;
+    height: 500px;
+    background-color: #ddd;
+    position: relative;
+    /* Efecto "plano" arquitectónico */
+    box-shadow: 20px 20px 0px rgba(0,0,0,0.1); 
+}
+
+/* Sobre Mí / Timeline */
+.about {
+    padding: 5rem 10%;
+    background: var(--white);
+}
+
+.about h2, .projects h2, footer h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    border-left: 5px solid var(--text-color);
+    padding-left: 1rem;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    border-left: 1px solid #ccc;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+}
+
+.date {
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Grid de Proyectos */
+.projects {
+    padding: 5rem 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    height: 250px;
+    background-color: #ccc; /* Gris hasta que suban fotos */
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-top: none;
+}
+
+/* Footer */
+footer {
+    padding: 4rem 10%;
+    background: var(--text-color);
+    color: var(--white);
+    text-align: center;
+}
+
+footer h2 {
+    border-color: var(--white);
+}
+
+.socials {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.socials a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.socials a:hover {
+    border-bottom: 1px solid var(--white);
+}
+
+/* Responsive Celular */
+@media (max-width: 768px) {
+    .navbar { padding: 1rem; }
+    .nav-links { display: none; } /* Podrías agregar un menú hamburguesa luego */
+    .hero { 
+        flex-direction: column; 
+        justify-content: center; 
+        text-align: center;
+        height: auto;
+        padding: 6rem 5%;
+    }
+    .hero-content h1 { font-size: 2.5rem; }
+    .visual-box { display: none; } /* Ocultar visual en móvil para ahorrar espacio */
+    .about, .projects { padding: 3rem 5%; }
+}
